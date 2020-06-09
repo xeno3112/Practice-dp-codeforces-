@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+#define ll long long
+int main(){
+    ll n, counter = 0;
+    cin >> n;
+    int coins[5] = {100, 20, 10, 5, 1};
+    for(int i = 0 ; i < 5 ; i++){
+        while(coins[i] <= n && n > 0){
+            n -= coins[i];
+            counter++;
+        }
+    }
+    cout << counter;
+}
